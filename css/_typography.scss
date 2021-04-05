@@ -1,0 +1,39 @@
+$font_body: "Inter", sans-serif;
+$font_title: "Shippori Mincho B1", serif;
+
+h1, h2, h3, h4{
+  font-family: $font_title;
+
+}
+
+small,
+p,
+li {
+  font-family: $font_body;
+}
+
+p{
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+h1{
+    font-size: 64px;
+}
+h2{
+  font-size: 40px;
+}
+small{
+    font-size: 14px;
+}
+
+a{
+  color:$primary;
+  text-decoration: none;
+  transition: 2s ease;
+  &:hover{
+    margin-right: 20px;
+    letter-spacing: 10;
+    transition: 1s ease;
+  }
+}

@@ -1,0 +1,363 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url(https://fonts.googleapis.com/css?family=Roboto:100);
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Shippori Mincho B1", serif;
+}
+
+small,
+p,
+li {
+  font-family: "Inter", sans-serif;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+h1 {
+  font-size: 64px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+small {
+  font-size: 14px;
+}
+
+a {
+  color: #5a001a;
+  text-decoration: none;
+  transition: 2s ease;
+}
+a:hover {
+  margin-right: 20px;
+  letter-spacing: 10;
+  transition: 1s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #edd8cb;
+}
+
+.logo {
+  text-align: center;
+}
+.logo h1 {
+  padding: 20px;
+}
+.logo small {
+  margin: 20px;
+}
+
+nav {
+  position: fixed;
+  right: 80px;
+  top: 80px;
+  text-align: right;
+}
+nav li {
+  padding-bottom: 15px;
+}
+
+.parallax-full-width {
+  margin-top: 100px;
+  background-image: url("../images/pack.jpg");
+  width: 100%;
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.parallax {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 1px;
+}
+
+.parallax__layer {
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.image-background {
+  background-image: url("../images/pack.jpg");
+  width: 100vh;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* Parallax base styles
+  --------------------------------------------- */
+.parallax {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 1px;
+}
+
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.parallax__layer--base {
+  transform: translateZ(0);
+}
+
+.parallax__layer--back {
+  transform: translateZ(-1px);
+}
+
+/* demo styles
+    --------------------------------------------- */
+.parallax {
+  z-index: 20;
+  text-align: center;
+}
+.parallax h1 {
+  padding: 20px;
+  font-size: 400%;
+}
+.parallax small {
+  margin: 20px;
+  font-size: 150%;
+}
+
+/* add some padding to force scrollbars */
+.parallax__layer {
+  padding: 0;
+}
+
+/* centre the content in the parallax layers */
+.title {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.image {
+  position: absolute;
+  top: 60%;
+}
+.image img {
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.product-1 {
+  height: 900px;
+  display: flex;
+  margin-top: 300px;
+  margin-bottom: 300px;
+  z-index: 3;
+}
+.product-1 .text-1 {
+  padding: 80px;
+  width: 50%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.product-1 .text-1 h2 {
+  padding-bottom: 20px;
+}
+.product-1 .picture-1 {
+  background-image: url("../images/georganic.jpg");
+  width: 1200px;
+  background-size: cover;
+  transform: translateZ(-0.5px);
+}
+
+.icon-logo {
+  position: absolute;
+  top: 1200px;
+  align-items: center;
+  background-image: url("../images/icon-logo.png");
+  width: 200%;
+  height: 300%;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  z-index: 2;
+  transform: translateZ(-2px);
+}
+
+.product-2 {
+  height: 900px;
+  display: flex;
+  z-index: 1;
+}
+.product-2 .text-2 {
+  padding: 80px;
+  width: 50%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.product-2 .text-2 h2 {
+  padding-bottom: 20px;
+}
+.product-2 .picture-2 {
+  background-image: url("../images/brushtooth.jpg");
+  width: 1200px;
+  background-size: cover;
+  transform: translateZ(-0.5px);
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  overflow: auto;
+  perspective: 1px;
+  transform-style: preserve-3d;
+}
+body, body * {
+  transform-style: preserve-3d;
+}
+
+.container {
+  padding: 10%;
+  max-width: 40em;
+  margin: auto;
+}
+.container :nth-child(1) {
+  transform: translateZ(-4.4px) scale(5.4);
+  z-index: -4400;
+  top: 200px;
+  left: 200px;
+}
+.container :nth-child(2) {
+  transform: translateZ(0.2px) scale(0.8);
+  z-index: 200;
+  top: 200px;
+  left: 500px;
+}
+.container :nth-child(3) {
+  transform: translateZ(0.3px) scale(0.7);
+  z-index: 300;
+  top: 400px;
+  left: 600px;
+}
+.container :nth-child(4) {
+  transform: translateZ(0.1px) scale(0.9);
+  z-index: 100;
+  top: 500px;
+  left: 500px;
+}
+.container :nth-child(5) {
+  transform: translateZ(-2px) scale(3);
+  z-index: -2000;
+  top: 2000px;
+  left: 2000px;
+}
+.container :nth-child(6) {
+  transform: translateZ(0.4px) scale(0.6);
+  z-index: 400;
+  top: 600px;
+  left: 300px;
+}
+.container :nth-child(7) {
+  transform: translateZ(-1px) scale(2);
+  z-index: -1000;
+  top: 400px;
+  left: 1000px;
+}
+.container :nth-child(8) {
+  transform: translateZ(-0.4px) scale(1.4);
+  z-index: -400;
+  top: 100px;
+  left: 1400px;
+}
+.container :nth-child(9) {
+  transform: translateZ(0.4px) scale(0.6);
+  z-index: 400;
+  top: 900px;
+  left: 500px;
+}
+.container :nth-child(10) {
+  transform: translateZ(-1px) scale(2);
+  z-index: -1000;
+  top: 1600px;
+  left: 100px;
+}
+.container > * {
+  position: absolute;
+}/*# sourceMappingURL=style.css.map */

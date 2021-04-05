@@ -1,0 +1,137 @@
+.image-background {
+  background-image: url("../images/pack.jpg");
+  width: 100vh;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Parallax base styles
+  --------------------------------------------- */
+
+.parallax {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-perspective: 1px;
+  perspective: 1px;
+  z-index: 20;
+  text-align: center;
+  h1 {
+    padding: 20px;
+    font-size: 400%;
+  }
+  small {
+    margin: 20px;
+    font-size: 150%;
+  }
+}
+
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.parallax__layer--base {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.parallax__layer--back {
+  -webkit-transform: translateZ(-1px);
+  transform: translateZ(-1px);
+}
+
+
+/* add some padding to force scrollbars */
+.parallax__layer {
+  padding: 0;
+}
+
+/* centre the content in the parallax layers */
+.title {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.image {
+  position: absolute;
+  top: 60%;
+  img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+}
+
+.product-1 {
+  height: 900px;
+  display: flex;
+  margin-top: 300px;
+  margin-bottom: 300px;
+  z-index: 3;
+
+  .text-1 {
+    padding: 80px;
+    width: 50%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+    h2 {
+      padding-bottom: 20px;
+    }
+  }
+
+  .picture-1 {
+    background-image: url("../images/georganic.jpg");
+    width: 1200px;
+    background-size: cover;
+    -webkit-transform: translateZ(-0.5px);
+    transform: translateZ(-0.5px);
+  }
+}
+
+.icon-logo {
+  position: absolute;
+  top: 1200px;
+  align-items: center;
+  background-image: url("../images/icon-logo.png");
+  width: 200%;
+  height: 300%;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  z-index: 2;
+  -webkit-transform: translateZ(-2px);
+  transform: translateZ(-2px);
+}
+
+.product-2 {
+  height: 900px;
+  display: flex;
+  z-index: 1;
+  .text-2 {
+    padding: 80px;
+    width: 50%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h2 {
+      padding-bottom: 20px;
+    }
+  }
+
+  .picture-2 {
+    background-image: url("../images/brushtooth.jpg");
+    width: 1200px;
+   background-size: cover;
+    -webkit-transform: translateZ(-0.5px);
+    transform: translateZ(-0.5px);
+  }
+}
